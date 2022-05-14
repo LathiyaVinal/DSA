@@ -1,4 +1,5 @@
-public static void main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -45,3 +46,6 @@ public static void main(String[] args) {
         
         System.out.println(arr1[final_l] + " " + arr2[final_r]);
     }
+    
+   
+} 
