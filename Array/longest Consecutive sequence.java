@@ -13,6 +13,9 @@ class Solution {
       
       int ans = 1;
       int count = 1;
+        
+      //for every element we will find if its most previous element is exist in array or not,
+        //         if not exist then we will check for most next element. 
       
       for(int i = 0 ; i < n ; i++){
         if(!hashmap.contains(nums[i] - 1)){
