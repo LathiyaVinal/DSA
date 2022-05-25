@@ -48,6 +48,22 @@ class MyStack {
     }
 }
 
+ // Driver program to test twoStack class 
+    public static void main(String args[]) 
+    { 
+        MyStack ts = new MyStack(5); 
+        ts.push(3); 
+        ts.push(10); 
+        ts.push(17); 
+        ts.push(11); 
+        ts.push(7); 
+        System.out.println("Popped element from"
+                           + " stack is " + ts.pop()); 
+        ts.push(60); 
+        System.out.println("Popped element from"
+                           + " stack is " + ts.pop()); 
+}
+
 /**
  * Your MyStack object will be instantiated and called as such:
  * MyStack obj = new MyStack();
