@@ -51,7 +51,7 @@ class MyStack {
  // Driver program to test twoStack class 
     public static void main(String args[]) 
     { 
-        MyStack ts = new MyStack(5); 
+        MyStack ts = new MyStack(); 
         ts.push(3); 
         ts.push(10); 
         ts.push(17); 
