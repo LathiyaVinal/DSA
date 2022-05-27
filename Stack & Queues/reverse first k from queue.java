@@ -13,9 +13,8 @@ public class Main {
       }
       
       Stack<Integer> stack = new Stack<>();
-      while(k > 0){
+      for(int i = 0  ;i < k ; i++){
         stack.push(queue.remove());
-        
       }
       while(!stack.isEmpty()){
         queue.add(stack.pop());
@@ -23,6 +22,10 @@ public class Main {
       
       for(int i = 0  ;i < (n-k) ; i++){
          queue.add(queue.remove());
+      }
+      
+      for(int i = 0 ; i < n ; i++){
+        System.out.print(queue.remove() + " ");
       }
     }
 }
