@@ -1,109 +1,66 @@
-// { Driver Code Starts
-//Initial Template for Java
+public static void main(String[] args) {
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Node
-{
-    int data;
-    Node next;
-    Node(int key)
-    {
-        data = key;
-        next = null;
-    }
-}
-
-class Driverclass
-{
-    public static void main (String[] args) 
-    {
-        Scanner sc= new Scanner(System.in);
-        int t = sc.nextInt();
-        
-        while(t-- > 0)
-        {
-            int n = sc.nextInt();
-            Node head = new Node(sc.nextInt());
-            Node tail = head;
-            while(n-- > 1){
-		        tail.next = new Node(sc.nextInt());
-		        tail = tail.next;
-		    }
-		   
-		      head = new Solution().segregate(head);
-		     printList(head);
-		    System.out.println();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Node head = new Node(sc.nextInt());
+        Node tail = head;
+        for (int i = 0; i < n - 1; i++) {
+            tail.next = new Node(sc.nextInt());
+            tail = tail.next;
         }
+
+        head = segregate(head);
+        printList(head);
+        System.out.println();
     }
-    
-    public static void printList(Node head)
-    {
-        if(head == null)
-           return;
-           
+
+    public static void printList(Node head) {
+        if (head == null) {
+            return;
+        }
+
         Node temp = head;
-        while(temp != null)
-        {
+        while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
     }
-    
-    
-}
 
+    static class Node {
 
+        int data;
+        Node next;
 
-// } Driver Code Ends
-
-
-//User function Template for Java
-
-/*
-class Node
-{
-    int data;
-    Node next;
-    Node(int data)
-    {
-        this.data = data;
-        next = null;
+        Node(int key) {
+            data = key;
+            next = null;
+        }
     }
-}
-*/
-class Solution
-{
-    //Function to sort a linked list of 0s, 1s and 2s.
-    static Node segregate(Node head)
-    {
+
+//Function to sort a linked list of 0s, 1s and 2s.
+    static Node segregate(Node head) {
         // add your code here
-        
+
         int[] count = new int[3];
         Node current = head;
-        while(current != null){
+        while (current != null) {
             count[current.data]++;
             current = current.next;
         }
-        
+
         current = head;
-        
+
         int i = 0;
-        while(current != null){
-            if(count[i] == 0){
+        while (current != null) {
+            if (count[i] == 0) {
                 i++;
-            }else{
+            } else {
                 current.data = i;
                 current = current.next;
                 count[i]--;
             }
-            
+
         }
-        
+
         return head;
     }
-}
-
-
