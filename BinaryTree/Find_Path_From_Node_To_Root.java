@@ -20,29 +20,28 @@ true // present node
 */
 
 
-public static ArrayList<Integer>  paths;
+  public static ArrayList<Integer> paths;
 
-  public static boolean find(Node node, int data){
-    
-    if(node == null){
-        return false;
+  public static boolean find(Node node, int data) {
+
+    if (node == null) {
+      return false;
     }
-    
-    if(node.data == data){
-        paths.add(node.data);
-        return true;
+    if (node.data == data) {
+      paths.add(node.data);
+      return true;
     }
-    
+
     boolean foundInLeftTree = find(node.left, data);
-    if(foundInLeftTree){
-        paths.add(node.data);
-        return true;
+    if (foundInLeftTree) {
+      paths.add(node.data);
+      return true;
     }
-    
     boolean foundInRightTree = find(node.right, data);
-    if(foundInRightTree){
-        paths.add(node.data);
-        return true;
+    if (foundInRightTree) {
+      paths.add(node.data);
+      return true;
     }
     return false;
   }
+
