@@ -3,8 +3,7 @@ class Solution {
 
     public boolean isPalindrome(ListNode head) {
         // write your code here
-    
-    
+        left = head;
         return checkIfPalindrome(head);
     }
 
