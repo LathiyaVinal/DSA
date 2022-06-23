@@ -46,10 +46,16 @@ public class getMaxLengthOfString {
         }
 
         int lastVal = patternArray[lengthOfPattern-1];
-        if(lastVal > lengthOfPattern/2){
-            return lengthOfPattern/2;
-        }else{
-            return lastVal;
-        }
+        return lastVal;
+        
+//         if(lastVal > lengthOfPattern/2){
+            
+//             // Since we are looking for
+//             // non overlapping parts. EX: abcabcabc
+//             // Because in this output lastval = 6. Which indicates overlapping parts. But output should be with non-overlapping parts 
+//             return lengthOfPattern/2;
+//         }else{
+//             return lastVal;
+//         }
     }
 }
