@@ -2,9 +2,16 @@
 //  OP : Found pattern at index 10 
 //////////////////////////
 
+// DESCRIPTION : How to craete pattern array : 
+// Create array with length of pattern and its first item will be 0 always 
+// i = 0; 
+// j = 1; -> here j is index at which we will fill value in array
+// if character at i & j position are equal then value to be filled in array is (i+1) 
+// take value at (i-1) and put i to that 
+
 import java.util.Arrays;
 
-public class linkedlist_1 {
+public class SearchPattern {
     public static void main(String[] args) {
         String MainString = "ABABDABACDABABCABAB";
         String pattern = "ABABCABAB";
@@ -12,10 +19,10 @@ public class linkedlist_1 {
         int[] patternArray = getPatternArray(pattern);
         System.out.println("Pattern Array : " + Arrays.toString(patternArray));
 
-        KMPSearch(pattern, MainString, patternArray);
+        SearchAllPatternIndexFromString(pattern, MainString, patternArray);
     }
 
-    static void KMPSearch(String pat, String txt, int[] lps)
+    static void SearchAllPatternIndexFromString(String pat, String txt, int[] lps)
     {
         int M = pat.length();
         int N = txt.length();
@@ -45,29 +52,6 @@ public class linkedlist_1 {
         }
     }
 
-    static boolean isMainStringContainsPattern(String mainString, String pattern, int[] patternArray){
-        int i = 0, j = 0;
-        boolean isContain = false;
-
-        while(i < mainString.length() && j < pattern.length()){
-            if(mainString.charAt(i) == pattern.charAt(j)){
-                i++;
-                j++;
-            }else{
-                while (pattern.charAt(i) != pattern.charAt(j)) {
-
-                    if (i >= 1) {
-                        i = patternArray[i - 1];
-                    } else {
-                        break;
-                    }
-                }
-            }
-        }
-
-        return isContain;
-    }
-
     static int[] getPatternArray(String pattern) {
         int lengthOfPattern = pattern.length();
 
@@ -82,22 +66,12 @@ public class linkedlist_1 {
                 i++;
                 j++;
             } else {
-                while (pattern.charAt(i) != pattern.charAt(j)) {
-
-                    if (i >= 1) {
-                        i = patternArray[i - 1];
-                    } else {
-                        break;
-                    }
-                }
-                if (pattern.charAt(i) != pattern.charAt(j)) {
-                    patternArray[j] = 0;
-                    j++;
-                } else {
-                    patternArray[j] = i + 1;
-                    i++;
-                    j++;
-                }
+                if(i >= 1){
+                 i = patternArray[i - 1];
+              }else{
+                 patternArray[j] = 0;
+                 j++;
+              }
             }
         }
         return patternArray;
