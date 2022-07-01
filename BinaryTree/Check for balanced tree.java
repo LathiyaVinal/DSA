@@ -1,9 +1,15 @@
+//To check if a tree is height-balanced, 
+//get the height of left and right subtrees.
+//Return true if difference between heights is not more than 1 
+//and left and right subtrees are balanced, otherwise return false. 
+
+
+
+
 class Tree
 {
     boolean isBalanced(Node root)
     {
-	   
-    
         if(root == null){
             return true;
         }
@@ -17,8 +23,6 @@ class Tree
         }
         return false;
     }
-    
-    
     
     int heightOfTree(Node root){
         if(root == null){
