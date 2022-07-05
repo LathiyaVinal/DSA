@@ -1,0 +1,25 @@
+class Solution {
+    public int kthSmallest(TreeNode root, int k) {
+        return inOrderTraversal(root, k).val;    
+    }
+  
+    int count = 0;
+    public TreeNode inOrderTraversal(TreeNode root, int k){
+      if(root == null){
+        return root;
+      }
+      
+      TreeNode left = inOrderTraversal(root.left, k);
+      
+      if (left != null)
+            return left;
+      
+      count++;
+      
+      if(count == k){
+        return root;
+      }
+      
+      return inOrderTraversal(root.right, k);
+    }
+}
