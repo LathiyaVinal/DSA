@@ -1,25 +1,28 @@
 class Solution {
+
     public int kthSmallest(TreeNode root, int k) {
-        return inOrderTraversal(root, k).val;    
+        inOrderTraversal(root, k);
+
+        return ans;
     }
-  
+
     int count = 0;
-    public TreeNode inOrderTraversal(TreeNode root, int k){
-      if(root == null){
-        return root;
-      }
-      
-      TreeNode left = inOrderTraversal(root.left, k);
-      
-      if (left != null)
-            return left;
-      
-      count++;
-      
-      if(count == k){
-        return root;
-      }
-      
-      return inOrderTraversal(root.right, k);
+    int ans = -1;
+
+    public void inOrderTraversal(TreeNode root, int k) {
+        if (root == null) {
+            return;
+        }
+
+        inOrderTraversal(root.left, k);
+
+        count++;
+
+        if (count == k) {
+            ans = root.val;
+            return;
+        }
+
+        inOrderTraversal(root.right, k);
     }
 }
