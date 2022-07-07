@@ -1,3 +1,7 @@
+// two trees are isomorphic of each other if 
+// Case 1 : right child of tree1 == left child of tree 2  &&  left child of tree1 == right child of tree2
+// Case 2 : right child of tree1 == right child of tree2  &&  left child of tree1 == left child of tree2
+
 
 class Solution  
 { 
