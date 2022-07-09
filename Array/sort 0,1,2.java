@@ -1,3 +1,6 @@
+//Time complexity : Constant time for swapping ele + o(n) = o(n)
+// space complexity : O(1)
+
 class Solution {
 
     public void sortColors(int[] nums) {
