@@ -10,6 +10,9 @@
  * }
  */
 
+// Time complexity: O(N), Only one traversal of the loop is needed.
+
+
 // https://leetcode.com/problems/linked-list-cycle-ii/
 
 
