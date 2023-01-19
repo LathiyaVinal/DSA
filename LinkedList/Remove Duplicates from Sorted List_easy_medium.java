@@ -11,7 +11,7 @@
 
 class Solution {
     
-    // easy level Input : 1 2 2 3 3 4 5 5 6, Output : 1  3 4 5 6
+    // easy level Input : 1 2 2 3 3 4 5 5 6, Output : 1 2 3 4 5 6
     public ListNode deleteDuplicates(ListNode head) {
         
         
