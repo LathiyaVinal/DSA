@@ -9,6 +9,9 @@
  *     }
  * }
  */
+
+// Time complexity: O(N)
+
 public class Solution {
     public boolean hasCycle(ListNode head) {
         
