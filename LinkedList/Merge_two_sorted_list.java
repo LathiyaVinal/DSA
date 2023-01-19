@@ -8,6 +8,9 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+Time complexity: O(N + M )
+    
 class Solution {
     
     public class LinkedList{
