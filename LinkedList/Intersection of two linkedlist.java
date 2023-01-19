@@ -1,5 +1,6 @@
 //https://www.geeksforgeeks.org/intersection-of-two-sorted-linked-lists/
 
+// Time Complexity: O(m+n) where m and n are number of nodes in first and second linked lists respectively. 
 
 void sortedIntersect(list1,list2)
 {
