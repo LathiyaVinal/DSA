@@ -1,3 +1,5 @@
+// Time complexity: O(N)
+
 class Solution {
     ListNode left;
 
