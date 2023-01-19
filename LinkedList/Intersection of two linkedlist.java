@@ -1,3 +1,6 @@
+//https://www.geeksforgeeks.org/intersection-of-two-sorted-linked-lists/
+
+
 void sortedIntersect(list1,list2)
 {
     while(list1 != null  &&  list2 != null)
