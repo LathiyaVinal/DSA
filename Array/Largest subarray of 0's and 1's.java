@@ -1,3 +1,5 @@
+//Time Complexity: O(n). 
+
 class Solution {
 
     // arr[] : the input array containing 0s and 1s
