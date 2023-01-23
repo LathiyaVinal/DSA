@@ -1,4 +1,7 @@
- public static void main(String[] args) {
+ //TC :  O(log n).
+
+
+public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
